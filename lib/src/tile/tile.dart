@@ -184,7 +184,7 @@ class S2Tile<T> extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Container(
-                  constraints: const BoxConstraints(maxWidth: 100),
+                  constraints: const BoxConstraints(maxWidth: 150),
                   child: _valueWidget,
                 ),
                 Padding(
