@@ -103,7 +103,8 @@ void main() {
       model.select(choiceToSelect[1], selected: false); // ignored
       model.select(choiceToSelect[1], selected: true);
       model.select(choiceToSelect[2], selected: false); // removed
-      expect(model.choice, List.from(choiceToSelect)..removeAt(2));
+      expect(
+          model.choice, List<S2Choice<int>>.from(choiceToSelect)..removeAt(2));
       expect(model.has(choiceToSelect[1]), true);
       expect(model.length, 2);
       expect(counter, 5);

@@ -32,7 +32,7 @@ void main() {
   );
 }
 
-testSmartSelect<T>({
+void testSmartSelect<T>({
   required String title,
   required List<S2Choice<T>> initialChoice,
   required List<S2Choice<T>> choiceToSelect,

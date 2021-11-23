@@ -9,9 +9,9 @@ class FeaturesOptionListOfString extends StatefulWidget {
 
 class _FeaturesOptionListOfStringState
     extends State<FeaturesOptionListOfString> {
-  List<int> _categories = [];
+  List<int>? _categories = [];
 
-  int _sort = 3;
+  int? _sort = 3;
 
   List<String> _categoriesOption = [
     'Electronics',
@@ -48,7 +48,7 @@ class _FeaturesOptionListOfStringState
                   title: 'Categories',
                   selectedValue: _categories,
                   onChange: (selected) {
-                    setState(() => _categories = selected.value);
+                    setState(() => _categories = selected?.value);
                   },
                   choiceItems: S2Choice.listFrom<int, String>(
                     source: _categoriesOption,
@@ -72,7 +72,7 @@ class _FeaturesOptionListOfStringState
                 child: VerticalDivider(),
               ),
               Expanded(
-                child: SmartSelect<int>.single(
+                child: SmartSelect<int?>.single(
                   title: 'Sort By',
                   selectedValue: _sort,
                   onChange: (selected) {
